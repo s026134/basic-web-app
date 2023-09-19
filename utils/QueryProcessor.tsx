@@ -16,11 +16,6 @@ export default function QueryProcessor(query: string): string {
       "Your name is Alexis"
     );
   }
-  else if(query.toLowerCase().includes("82 plus 44")){
-    return(
-      "The answer is 126"
-    );
-  }
   else if(query.toLowerCase().includes("plus")){
     const addMatch = query.match(/What is (\d+) plus (\d+)?/);
     if (addMatch) {
