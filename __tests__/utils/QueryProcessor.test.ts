@@ -33,4 +33,12 @@ describe("QueryProcessor", () => {
             "Your name is Alexis"
         ));
     })
+    // test('should answer addition', () => {
+    //     const response : string = QueryProcessor(query);
+    //     expect(QueryProcessor("What is 5 plus 52?")).toEqual("57");
+        
+    //     expect(response).toBe((
+    //         "The answer is 126"
+    //     ));
+    // })
 });
