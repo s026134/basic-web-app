@@ -27,7 +27,16 @@ export default function QueryProcessor(query: string): string {
           const x: number = parseInt(addMatch[1]);
           const y: number = parseInt(addMatch[2]);
           const newString : string = (x+y).toString();
-          return `The answer is ${newString}`;
+          return newString;
+    }
+  }
+  else if(query.toLowerCase().includes("multiplied")){
+    const addMatch = query.match(/What is (\d+) multiplied by (\d+)/);
+    if (addMatch) {
+          const x: number = parseInt(addMatch[1]);
+          const y: number = parseInt(addMatch[2]);
+          const newString : string = (x*y).toString();
+          return newString;
     }
   }
   else if(query.toLowerCase().includes("largest")){
@@ -37,15 +46,18 @@ export default function QueryProcessor(query: string): string {
           const y: number = parseInt(addMatch[2]);
           const z: number = parseInt(addMatch[3]);
           const newString : string = (Math.max(x, y ,z)).toString();
-          return `The answer is ${newString}`;
+          return newString;
     }
   }
-  else if(query.toLowerCase().includes("largest")){
-    const addMatch = query.match(/Which of the following numbers is the largest: (\d+), (\d+), (\d+)/);
+  else if(query.toLowerCase().includes("square and a cube")){
+    const addMatch = query.match(/Which of the following numbers is both a square and a cube: (\d+), (\d+), (\d+), (\d+), (\d+), (\d+), (\d+)/);
     if (addMatch) {
           const x: number = parseInt(addMatch[1]);
           const y: number = parseInt(addMatch[2]);
           const z: number = parseInt(addMatch[3]);
+          const a: number = parseInt(addMatch[4]);
+          const b: number = parseInt(addMatch[5]);
+          const c: number = parseInt(addMatch[6]);
           const newString : string = (Math.max(x, y ,z)).toString();
           return `The answer is ${newString}`;
     }
